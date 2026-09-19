@@ -9,7 +9,7 @@
   <b>Living memory layer across your coding agents and AI tool.</b>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/pypi/v/slowave?color=2f6f4e)](https://pypi.org/project/slowave/" />
+  <a href="https://pypi.org/project/slowave/"><img src="https://img.shields.io/pypi/v/slowave?color=2f6f4e)](https://pypi.org/project/slowave/" /></a>
   <img src="https://img.shields.io/badge/python-3.11%2B-4c6f91" />
   <img src="https://img.shields.io/pypi/status/slowave?color=orange" />
   <img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)" />
