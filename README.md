@@ -6,7 +6,7 @@
   <img src="img/slowave-logo-text.jpeg" alt="Slowave" width="450"/>
 </p>
 <p align="center">
-  <b>Living memory layer across your coding agents and AI tool.</b>
+  <b>Living memory layer across your coding agents and AI tools.</b>
 </p>
 <p align="center">
   <a href="https://pypi.org/project/slowave/"><img src="https://img.shields.io/pypi/v/slowave?color=2f6f4e)](https://pypi.org/project/slowave/" /></a>
