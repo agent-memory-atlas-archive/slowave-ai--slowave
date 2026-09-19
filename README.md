@@ -24,7 +24,7 @@ Slowave gives your agents one local, shared memory, without requiring a separate
 Slowave is designed as an adaptive memory layer rather than a static retrieval or summarisation system. 
 It approaches agent memory from a different angle:
 
-> **Memory and reasoning modules interaction whould be bi-directional.**
+> **Memory and reasoning need to interact bidirectionally.**
 
 Agent memory is not only a retrieval problem. A useful memory system should retain what helps the agent, weaken what does not, and continuously adapt based on use.Slowave addresses this with a continuous feedback loop between your agent and its memory:
 
