@@ -14,6 +14,7 @@
   <img src="https://img.shields.io/pypi/status/slowave?color=orange" />
   <img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg" />
 </p>
+<p align="center">Supported integrations: Claude Code, Codex, OpenCode, Cursor, Cline, Windsurf/Devin, Claude Desktop</p>
 
 
 ---
@@ -47,15 +48,7 @@ The first useful payoff is simply not having to repeat the same constraint in th
 
 Over time, the way you work becomes reusable context for your agent.
 
-### Supported integrations:
-
-- Claude Code
-- Codex
-- Cursor
-- Cline 
-- Windsurf / Devin Desktop 
-- OpenCode
-- Claude Desktop 
+ 
 
 See [platform coverage and manual steps](#supported-clients).
 
