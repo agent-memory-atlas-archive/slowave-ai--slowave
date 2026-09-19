@@ -1,30 +1,32 @@
-[![PyPI](https://img.shields.io/pypi/v/slowave?color=2f6f4e)](https://pypi.org/project/slowave/)
-[![Python](https://img.shields.io/badge/python-3.11%2B-4c6f91)](https://pypi.org/project/slowave/)
-[![PyPI Status](https://img.shields.io/pypi/status/slowave?color=orange)](https://pypi.org/project/slowave/)
-[![License: AGPL-3.0-or-later](https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)](LICENSE)
-
 <!-- mcp-name: io.github.slowave-ai/slowave -->
 
 ---
 
-<img src="img/slowave-logo-text.jpeg" alt="Slowave" width="300"/>
+<p align="center">
+  <img src="img/slowave-logo-text.jpeg" alt="Slowave" width="450"/>
+</p>
+<p align="center">
+  <b>Living memory layer across your coding agents and AI tool.</b>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/pypi/v/slowave?color=2f6f4e)](https://pypi.org/project/slowave/" />
+  <img src="https://img.shields.io/badge/python-3.11%2B-4c6f91" />
+  <img src="https://img.shields.io/pypi/status/slowave?color=orange" />
+  <img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)" />
+</p>
 
-**Living memory layer across your AI tools.**
 
 ---
-
 AI agents have large context windows, but that context ends with your current session.
 Open a new session, switch from Claude Code to Codex, and you have to restate the same decisions, constraints, and failed attempts.
-
 Slowave gives your agents one local, shared memory, without requiring a separate LLM for memory maintenance.
 
-Slowave is designed as an adaptive memory layer rather than a static retrieval or summarisation system; it approaches agent memory from a different angle:
+Slowave is designed as an adaptive memory layer rather than a static retrieval or summarisation system. 
+It approaches agent memory from a different angle:
 
-> **An effective memory system should help an agent achieve its goals.**
+> **Memory and reasoning modules interaction whould be bi-directional.**
 
-Agent memory is not only a retrieval problem. A useful memory system should retain what helps the agent, weaken what does not, and continuously adapt based on use.
-
-Slowave addresses this with a continuous feedback loop between your agent and its memory:
+Agent memory is not only a retrieval problem. A useful memory system should retain what helps the agent, weaken what does not, and continuously adapt based on use.Slowave addresses this with a continuous feedback loop between your agent and its memory:
 
 > **remember → recall → use → feedback → reinforce / weaken → decay**
 
