@@ -70,13 +70,12 @@ To remove Slowave, see the [removal guide](docs/install.md#remove-slowave).
 
 ## What changes in your workflow?
 
-Slowave is transparent to your work.
+Slowave is transparent to your work. You keep working with your agent as usual. 
 
-You keep working with your agent as usual. 
+Slowave is strictly connected to your agent in both directions:
 
-When your agent encounters a durable fact or decision, the installed lifecycle directs it to preserve that claim.
-
-On a later task, Slowave can return a compact, scoped set of relevant recorded memories to your agent, so that it can act upon its own memories. 
+- **Agent → Slowave**: When your agent encounters a durable fact, decision, or procedure the installed lifecycle directs it to preserve that claim into Slowave.
+- **Slowave → Agent**: At the beginning of each task Slowave may return a compact, scoped set of relevant recorded memories or procedures to your agent, so that it can act upon its own memories. 
 
 What you will see while working with your agent:
 - your agent activating Slowave for the current task and goal, 
