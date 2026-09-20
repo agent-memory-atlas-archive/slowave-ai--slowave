@@ -28,7 +28,7 @@ It approaches agent memory from a different angle:
 
 ```mermaid
 graph LR
-    LLM["Reasoning<br/>(LLM)"]
+    LLM["Reasoning<br/>(Claude, Codex, etc.)"]
     MEM["Memory<br/>(Slowave)"]
 
     MEM -->|Retrieve| LLM
