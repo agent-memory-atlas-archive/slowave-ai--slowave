@@ -31,7 +31,7 @@ graph LR
     LLM["Reasoning<br/>(LLM)"]
     MEM["Memory<br/>(Slowave)"]
 
-    MEM -->|Retrieval| LLM
+    MEM -->|Retrieve| LLM
     LLM -->|Feedback| MEM
     MEM -->|Adapt| MEM
 ```
