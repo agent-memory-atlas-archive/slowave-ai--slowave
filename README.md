@@ -6,15 +6,14 @@
   <img src="img/slowave-logo-text.jpeg" alt="Slowave" width="450"/>
 </p>
 <p align="center">
-  <b>Living memory layer across your coding agents and AI tools.</b>
+  <b>Living memory layer across your coding agents and AI tool.</b>
 </p>
 <p align="center">
-  <a href="https://pypi.org/project/slowave/"><img src="https://img.shields.io/pypi/v/slowave?color=2f6f4e)](https://pypi.org/project/slowave/" /></a>
+  <img src="https://img.shields.io/pypi/v/slowave?color=2f6f4e)](https://pypi.org/project/slowave/" />
   <img src="https://img.shields.io/badge/python-3.11%2B-4c6f91" />
   <img src="https://img.shields.io/pypi/status/slowave?color=orange" />
-  <img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg" />
+  <img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)" />
 </p>
-<p align="center">Supported integrations: Claude Code, Codex, OpenCode, Cursor, Cline, Windsurf/Devin, Claude Desktop</p>
 
 
 ---
@@ -25,7 +24,17 @@ Slowave gives your agents one local, shared memory, without requiring a separate
 Slowave is designed as an adaptive memory layer rather than a static retrieval or summarisation system. 
 It approaches agent memory from a different angle:
 
-> **Memory and reasoning need to interact bidirectionally.**
+> **Memory and reasoning feed each other in a continuous loop.**
+
+```mermaid
+graph LR
+    LLM["Reasoning<br/>(LLM)"]
+    MEM["Memory<br/>(Slowave)"]
+
+    MEM -->|Retrieval| LLM
+    LLM -->|Feedback| MEM
+    MEM -->|Adapt| MEM
+```
 
 Agent memory is not only a retrieval problem. A useful memory system should retain what helps the agent, weaken what does not, and continuously adapt based on use.Slowave addresses this with a continuous feedback loop between your agent and its memory:
 
@@ -48,7 +57,15 @@ The first useful payoff is simply not having to repeat the same constraint in th
 
 Over time, the way you work becomes reusable context for your agent.
 
- 
+### Supported integrations:
+
+- Claude Code
+- Codex
+- Cursor
+- Cline 
+- Windsurf / Devin Desktop 
+- OpenCode
+- Claude Desktop 
 
 See [platform coverage and manual steps](#supported-clients).
 
@@ -70,12 +87,13 @@ To remove Slowave, see the [removal guide](docs/install.md#remove-slowave).
 
 ## What changes in your workflow?
 
-Slowave is transparent to your work. You keep working with your agent as usual. 
+Slowave is transparent to your work.
 
-Slowave is strictly connected to your agent in both directions:
+You keep working with your agent as usual. 
 
-- **Agent → Slowave**: When your agent encounters a durable fact, decision, or procedure the installed lifecycle directs it to preserve that claim into Slowave.
-- **Slowave → Agent**: At the beginning of each task Slowave may return a compact, scoped set of relevant recorded memories or procedures to your agent, so that it can act upon its own memories. 
+When your agent encounters a durable fact or decision, the installed lifecycle directs it to preserve that claim.
+
+On a later task, Slowave can return a compact, scoped set of relevant recorded memories to your agent, so that it can act upon its own memories. 
 
 What you will see while working with your agent:
 - your agent activating Slowave for the current task and goal, 
@@ -110,19 +128,17 @@ Open the dashboard in your browser, where you can inspect:
 - **System health:** check the database, worker, backups, and local services.
 
 <p align="center">
-  <a href="img/graph.jpg">
-    <img src="img/graph.jpg" alt="Memory graph" width="80%">
+  <a href="img/overview.jpg">
+    <img src="img/overview.jpg" alt="Slowave local dashboard" width="80%">
   </a>
-  
 </p>
 
 <p align="center">
-    <a href="img/overview.jpg"><img src="img/overview.jpg" alt="Slowave local dashboard" width="16%"></a>
     <a href="img/schemas.jpg"><img src="img/schemas.jpg" alt="Memory detail" width="16%"></a>
     <a href="img/procedures.jpg"><img src="img/procedures.jpg" alt="Procedures" width="16%"></a>
     <a href="img/retrieval.jpg"><img src="img/retrieval.jpg" alt="Retrieval" width="16%"></a>
     <a href="img/activity.jpg"><img src="img/activity.jpg" alt="Activity" width="16%"></a>
-    
+    <a href="img/graph.jpg"><img src="img/graph.jpg" alt="Memory graph" width="16%"></a>
 </p>
 
 
