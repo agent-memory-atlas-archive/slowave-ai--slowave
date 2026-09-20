@@ -120,18 +120,17 @@ Open the dashboard in your browser, where you can inspect:
 - **Memory graph:** explore connections between related memories.
 - **System health:** check the database, worker, backups, and local services.
 
+
 <p align="center">
-  <a href="img/overview.jpg">
-    <img src="img/overview.jpg" alt="Slowave local dashboard" width="80%">
-  </a>
+  <a href="img/graph.jpg"><img src="img/graph.jpg" alt="Memory graph" width="90%"></a>
 </p>
 
 <p align="center">
-    <a href="img/schemas.jpg"><img src="img/schemas.jpg" alt="Memory detail" width="16%"></a>
-    <a href="img/procedures.jpg"><img src="img/procedures.jpg" alt="Procedures" width="16%"></a>
-    <a href="img/retrieval.jpg"><img src="img/retrieval.jpg" alt="Retrieval" width="16%"></a>
+    <a href="img/overview.jpg"><img src="img/overview.jpg" alt="Slowave local dashboard" width="18%"></a>
+    <a href="img/schemas.jpg"><img src="img/schemas.jpg" alt="Memory detail" width="18%"></a>
+    <a href="img/procedures.jpg"><img src="img/procedures.jpg" alt="Procedures" width="18%"></a>
+    <a href="img/retrieval.jpg"><img src="img/retrieval.jpg" alt="Retrieval" width="18%"></a>
     <a href="img/activity.jpg"><img src="img/activity.jpg" alt="Activity" width="16%"></a>
-    <a href="img/graph.jpg"><img src="img/graph.jpg" alt="Memory graph" width="16%"></a>
 </p>
 
 
