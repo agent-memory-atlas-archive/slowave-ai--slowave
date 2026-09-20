@@ -6,13 +6,13 @@
   <img src="img/slowave-logo-text.jpeg" alt="Slowave" width="450"/>
 </p>
 <p align="center">
-  <b>Living memory layer across your coding agents and AI tool.</b>
+  <b>Living memory layer across your coding agents and AI tools.</b>
 </p>
 <p align="center">
   <img src="https://img.shields.io/pypi/v/slowave?color=2f6f4e)](https://pypi.org/project/slowave/" />
   <img src="https://img.shields.io/badge/python-3.11%2B-4c6f91" />
   <img src="https://img.shields.io/pypi/status/slowave?color=orange" />
-  <img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)" />
+  <img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg" />
 </p>
 
 
@@ -36,7 +36,7 @@ graph LR
     MEM -->|Adapt| MEM
 ```
 
-Agent memory is not only a retrieval problem. A useful memory system should retain what helps the agent, weaken what does not, and continuously adapt based on use.Slowave addresses this with a continuous feedback loop between your agent and its memory:
+Agent memory is not only a retrieval problem. A useful memory system should retain what helps the agent, weaken what does not, and continuously adapt based on use. Slowave addresses this with a continuous feedback loop between your agent and its memory:
 
 > **remember → recall → use → feedback → reinforce / weaken → decay**
 
