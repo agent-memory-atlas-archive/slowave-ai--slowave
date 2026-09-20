@@ -14,6 +14,9 @@
   <img src="https://img.shields.io/pypi/status/slowave?color=orange" />
   <img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg" />
 </p>
+<p align="center">
+  Supports: Claude Code, Codex, OpenCode, Cursor, Cline, Windsurf/Devin Desktop, Claude Desktop 
+</p>
 
 
 ---
@@ -36,7 +39,7 @@ graph LR
     MEM -->|Adapt| MEM
 ```
 
-Agent memory is not only a retrieval problem. A useful memory system should retain what helps the agent, weaken what does not, and continuously adapt based on use. Slowave addresses this with a continuous feedback loop between your agent and its memory:
+Agent memory is not only a retrieval problem. A useful memory system should retain what helps the agent achieving its goal, weaken what does not, and continuously adapt based on use. Slowave addresses this with a continuous feedback loop between your agent and its memory:
 
 > **remember → recall → use → feedback → reinforce / weaken → decay**
 
@@ -56,16 +59,6 @@ Memory becomes something continuously shaped by use rather than a static collect
 The first useful payoff is simply not having to repeat the same constraint in the next task. 
 
 Over time, the way you work becomes reusable context for your agent.
-
-### Supported integrations:
-
-- Claude Code
-- Codex
-- Cursor
-- Cline 
-- Windsurf / Devin Desktop 
-- OpenCode
-- Claude Desktop 
 
 See [platform coverage and manual steps](#supported-clients).
 
