@@ -127,7 +127,7 @@ From the dashboard you can:
 
 The overview also helps answer whether the memory loop is working: how many memories and procedures exist, how often retrieved context is reported as used, how much is marked irrelevant, whether feedback is being recorded, and how creation, retrieval, and use change over time.
 
-Slowave also shows a rough estimate of the context returned through **Activate** and **Recall**, so you can keep an eye on memory overhead.
+Slowave also shows a rough estimate of the context returned through all MCP endpoints, so you can keep an eye on memory overhead.
 
 <p align="center">
     <a href="img/overview.jpg"><img src="img/overview.jpg" alt="Slowave local dashboard" width="90%"></a>
