@@ -127,17 +127,18 @@ From the dashboard you can:
 
 The overview also helps answer whether the memory loop is working: how many memories and procedures exist, how often retrieved context is reported as used, how much is marked irrelevant, whether feedback is being recorded, and how creation, retrieval, and use change over time.
 
-Slowave also shows a rough estimate of the context returned through the MCP endpoints, so you can keep an eye on memory overhead.
+Slowave also shows a rough estimate of the context returned through **Activate** and **Recall**, so you can keep an eye on memory overhead.
+
 <p align="center">
-  <a href="img/graph.jpg"><img src="img/graph.jpg" alt="Memory graph" width="90%"></a>
+    <a href="img/overview.jpg"><img src="img/overview.jpg" alt="Slowave local dashboard" width="90%"></a>
 </p>
 
 <p align="center">
-    <a href="img/overview.jpg"><img src="img/overview.jpg" alt="Slowave local dashboard" width="18%"></a>
-    <a href="img/memories.jpg"><img src="img/memories.jpg" alt="Memory detail" width="18%"></a>
-    <a href="img/procedures.jpg"><img src="img/procedures.jpg" alt="Procedures" width="18%"></a>
-    <a href="img/retrieval.jpg"><img src="img/retrieval.jpg" alt="Retrieval" width="18%"></a>
-    <a href="img/activity.jpg"><img src="img/activity.jpg" alt="Activity" width="16%"></a>
+    <a href="img/memories.jpg"><img src="img/memories.jpg" alt="Memory detail" width="17%"></a>
+    <a href="img/procedures.jpg"><img src="img/procedures.jpg" alt="Procedures" width="17%"></a>
+    <a href="img/retrieval.jpg"><img src="img/retrieval.jpg" alt="Retrieval" width="17%"></a>
+    <a href="img/graph.jpg"><img src="img/graph.jpg" alt="Memory graph" width="17%"></a>
+    <a href="img/activity.jpg"><img src="img/activity.jpg" alt="Activity" width="17"></a>
 </p>
 
 
