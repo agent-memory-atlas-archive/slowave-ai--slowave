@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg" />
 </p>
 <p align="center">
-  Supports: Claude Code, Codex, OpenCode, Cursor, Cline, Windsurf/Devin Desktop, Claude Desktop 
+  Supports: Claude Code, Codex, OpenCode, Cursor, Cline, Windsurf/Devin Desktop, Claude Desktop, GitHub Copilot CLI
 </p>
 
 
@@ -106,37 +106,35 @@ became stale. Slowave maintains the resulting local memory.
 
 ## Dashboard
 
-Start the local dashboard with:
+The local dashboard shows what Slowave is actually doing with your agent's memory over time: what it remembers, what it retrieves, and what your agent reports using.
+
+As your history grows, you can follow a memory from where it came from to the tasks where it was later retrieved and used. You can inspect learned procedures, see when retrieved context was useful or irrelevant, and understand whether Slowave is helping your agent reuse past work rather than simply accumulating memories.
+
+Start the dashboard with:
 
 ```bash
 slowave dashboard
 ```
 
-In the dashboard, inspect:
+From the dashboard you can:
 
-- **Memories:** browse saved decisions, constraints, and lessons.
-- **Procedures:** review reusable step-by-step methods from past work.
-- **Retrievals:** see what memory Slowave returned for each task.
-- **Activity:** follow recent sessions, memory updates, and feedback.
-- **Memory graph:** explore connections between related memories.
-- **System health:** check the database, worker, backups, and local services.
+- **Inspect memories:** see what was saved, where it came from, its current state, and when it was later retrieved or used.
+- **Inspect procedures:** review reusable methods captured from previous work and see when they are retrieved and reused.
+- **Trace retrievals:** see the request, the context Slowave actually returned, and the feedback reported by the agent.
+- **Follow activity:** inspect tasks, retrievals, feedback, memory updates, and their links to each other.
+- **Explore memory connections:** browse relationships and associations between memories.
+- **Check system health:** inspect the database, background maintenance, backups, and local services.
 
-Track memory health and retrieval effectiveness with:
+The overview also helps answer whether the memory loop is working: how many memories and procedures exist, how often retrieved context is reported as used, how much is marked irrelevant, whether feedback is being recorded, and how creation, retrieval, and use change over time.
 
-- **Active memories:** the number of memories currently available for retrieval.
-- **Memory retrieval coverage:** the share of active memories retrieved at least once during the selected period.
-- **Assessed memories used:** the share of assessed retrieved memories explicitly marked as useful.
-- **Retrieval match rate:** the share of eligible retrievals that returned at least one admitted item.
-- **Feedback coverage:** the share of retrievals with complete feedback recorded.
-
-
+Slowave also shows a rough estimate of the context returned through the MCP endpoints, so you can keep an eye on memory overhead. 
 <p align="center">
   <a href="img/graph.jpg"><img src="img/graph.jpg" alt="Memory graph" width="90%"></a>
 </p>
 
 <p align="center">
     <a href="img/overview.jpg"><img src="img/overview.jpg" alt="Slowave local dashboard" width="18%"></a>
-    <a href="img/schemas.jpg"><img src="img/schemas.jpg" alt="Memory detail" width="18%"></a>
+    <a href="img/memories.jpg"><img src="img/memories.jpg" alt="Memory detail" width="18%"></a>
     <a href="img/procedures.jpg"><img src="img/procedures.jpg" alt="Procedures" width="18%"></a>
     <a href="img/retrieval.jpg"><img src="img/retrieval.jpg" alt="Retrieval" width="18%"></a>
     <a href="img/activity.jpg"><img src="img/activity.jpg" alt="Activity" width="16%"></a>
@@ -158,9 +156,13 @@ Client coverage is actively expanding. Suggest more integrations or report broke
 | [Claude Desktop](integrations/claude-desktop/README.md) | ✅ | ✅ | ✅ | `slowave setup --client claude-desktop` ¹ |
 | [OpenCode](integrations/opencode/README.md) | ✅ | ✅ | ✅ | `slowave setup --client opencode` |
 | [Codex](integrations/codex/README.md) | ✅ | ✅ | ✅ | `slowave setup --client codex` |
+| [GitHub Copilot CLI](integrations/copilot/README.md) | ⬜ | ⬜ | ⬜ | `slowave setup --client copilot` |
 | All the above |  |  |  | `slowave setup` |
 
 ¹ requires one manual paste after setup
+
+Copilot support targets local CLI execution. Automated integration tests pass; native
+Copilot verification is pending. IDE, desktop, and hosted/cloud Copilot support is deferred.
 
 > [!IMPORTANT]
 > The default embedding model downloads from Hugging Face on first use (~45 MB, cached locally). Subsequent runs work offline.
