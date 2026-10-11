@@ -214,7 +214,6 @@ See [architecture.md](docs/architecture.md) and [design.md](docs/design.md) for 
 - It cannot recall information that was never recorded.
 - It supplies relevant context, but the connected agent decides how to interpret and use it.
 - Memory quality depends on the client agent and the feedback it provides.
-- Scopes reduce accidental context leakage; use separate stores when hard isolation is required.
 - Slowave adds token overhead from tool calls and retrieved context.
 - The local SQLite database is plaintext by default; protect it with OS permissions or full-disk encryption.
 
