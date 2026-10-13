@@ -21,17 +21,17 @@
 
 ---
 AI agents have large context windows, but that context ends with your current session.
-Open a new session, switch from Claude Code to Codex, and you have to restate the same decisions, constraints, and failed attempts.
+Open a new session, switch from Claude Code to Codex, and you have to restate the same decisions, constraints, over and over.
 
 Slowave gives your agents one local, shared memory, without requiring a separate LLM for memory maintenance.
 
-Slowave is an adaptive memory layer that approaches agent memory from a specific angle:
+At the core Slowave is built around a simple concept:
 
-> **Reasoning and memory form a continuous feedback loop.**
+> **Reasoning and memory feed each other in a continuous loop.**
 
 ```mermaid
 graph LR
-    LLM["Reasoning<br/>(Claude, Codex, etc.)"]
+    LLM["Reasoning<br/>(Claude, Codex, Copilot, etc.)"]
     MEM["Memory<br/>(Slowave)"]
     
     LLM -->|Feedback| MEM
@@ -43,13 +43,12 @@ Slowave retains what helps agents achieve their goals, weakens what does not, an
 
 > **remember → recall → use → feedback → reinforce / weaken → decay**
 
-Over time, your agent’s feedback shapes what Slowave returns, and your memories become reusable context for your agent to achieve its goals.
 
 Memory is continuously reshaped by use rather than a static collection of facts waiting to be retrieved.
 
-- **Keep context across tasks**: Your agents can reuse recorded decisions, preferences, constraints, and lessons instead of making you repeat them.
-- **Improves with use:** Useful memories strengthen, irrelevant ones lose priority, stale knowledge can be suppressed or superseded.
-- **Learns from experience:** Decisions, outcomes, and multi-step solutions can become reusable memories and procedures.
+- **Keep context across tasks:** Your agents can reuse recorded decisions, preferences, constraints, and lessons.
+- **Evolves through feedback:** Useful memories grow stronger, irrelevant ones lose priority, stale knowledge can be superseded.
+- **Learns from experience:** Decisions, outcomes, and multi-step solutions can become reusable context your agents can act on.
 - **Runs locally:** Slowave stores memory in SQLite and does not send it to a hosted memory service.
 - **No LLM API key:** The memory core performs maintenance and retrieval without LLM calls or an LLM API key.
 - **Inspectable and measurable:** Review memories, retrievals, feedback, procedures, and system performance in the local dashboard.
@@ -58,7 +57,10 @@ The first useful payoff is simply not having to repeat the same constraint in th
 
 Over time, the way you work becomes reusable context for your agent.
 
-See [platform coverage and manual steps](#supported-clients).
+
+<p align="center">
+  <sub><a href="#supported-clients">Platform coverage and setup details</a></sub>
+</p>
 
 ## Installation
 
@@ -150,14 +152,14 @@ Client coverage is actively expanding. Suggest more integrations or report broke
 
 | Client         | macOS | Linux | Windows | Setup                                    |
 |----------------|--|--|--|------------------------------------------|
-| [Claude Code](integrations/claude-code/README.md) | ✅ | ✅ | ✅ | `slowave setup --client claude-code` |
-| [Copilot CLI](integrations/copilot/README.md) | ✅ | ✅ | ✅ | `slowave setup --client copilot` |
-| [Codex](integrations/codex/README.md) | ✅ | ✅ | ✅ | `slowave setup --client codex` |
-| [Cursor](integrations/cursor/README.md) | ✅ | ✅ | ✅ | `slowave setup --client cursor` ¹ |
-| [OpenCode](integrations/opencode/README.md) | ✅ | ✅ | ✅ | `slowave setup --client opencode` |
-| [Windsurf](integrations/windsurf/README.md) | ✅ | ✅ | ✅ | `slowave setup --client windsurf` |
-| [Cline](integrations/cline/README.md) | ✅ | ✅ | ✅ | `slowave setup --client cline` |
-| [Claude Desktop](integrations/claude-desktop/README.md) | ✅ | ✅ | ✅ | `slowave setup --client claude-desktop` ¹ |
+| <img src="img/clients/claude.svg" alt="" title="Claude Code" width="20" height="20" align="center" />&nbsp; [Claude Code](integrations/claude-code/README.md) | ✅ | ✅ | ✅ | `slowave setup --client claude-code` |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="img/clients/copilot-dark.svg" /><img src="img/clients/copilot.svg" alt="" title="Copilot CLI" width="20" height="20" align="center" /></picture>&nbsp; [Copilot CLI](integrations/copilot/README.md) | ✅ | ✅ | ✅ | `slowave setup --client copilot` |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="img/clients/openai-dark.svg" /><img src="img/clients/openai.svg" alt="" title="Codex" width="20" height="20" align="center" /></picture>&nbsp; [Codex](integrations/codex/README.md) | ✅ | ✅ | ✅ | `slowave setup --client codex` |
+| <img src="img/clients/cursor.svg" alt="" title="Cursor" width="20" height="20" align="center" />&nbsp; [Cursor](integrations/cursor/README.md) | ✅ | ✅ | ✅ | `slowave setup --client cursor` ¹ |
+| <img src="img/clients/opencode-mark.svg" alt="" title="OpenCode" width="20" height="20" align="center" />&nbsp; [OpenCode](integrations/opencode/README.md) | ✅ | ✅ | ✅ | `slowave setup --client opencode` |
+| <img src="img/clients/windsurf.svg" alt="" title="Windsurf" width="20" height="20" align="center" />&nbsp; [Windsurf](integrations/windsurf/README.md) | ✅ | ✅ | ✅ | `slowave setup --client windsurf` |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="img/clients/cline-dark.svg" /><img src="img/clients/cline.svg" alt="" title="Cline" width="20" height="20" align="center" /></picture>&nbsp; [Cline](integrations/cline/README.md) | ✅ | ✅ | ✅ | `slowave setup --client cline` |
+| <img src="img/clients/claude.svg" alt="" title="Claude Desktop" width="20" height="20" align="center" />&nbsp; [Claude Desktop](integrations/claude-desktop/README.md) | ✅ | ✅ | ✅ | `slowave setup --client claude-desktop` ¹ |
 | All the above |  |  |  | `slowave setup` |
 
 ¹ requires one manual paste after setup
@@ -212,7 +214,6 @@ See [architecture.md](docs/architecture.md) and [design.md](docs/design.md) for 
 
 - Slowave is a memory layer, not a reasoning engine.
 - It cannot recall information that was never recorded.
-- It supplies relevant context, but the connected agent decides how to interpret and use it.
 - Memory quality depends on the client agent and the feedback it provides.
 - Slowave adds token overhead from tool calls and retrieved context.
 - The local SQLite database is plaintext by default; protect it with OS permissions or full-disk encryption.
