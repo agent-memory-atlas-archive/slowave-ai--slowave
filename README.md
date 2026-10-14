@@ -20,8 +20,9 @@
 
 
 ---
-AI agents have large context windows, but that context ends with your current session.
-Open a new session, switch from Claude Code to Codex, and you have to restate the same decisions, constraints, over and over.
+Your coding agent have a large context window, but that context ends with your current session.
+
+Open a new session, switch from Claude Code to Codex, and you have to restate the same decisions, constraints, thinking process. Over and over.
 
 Slowave gives your agents one local, shared memory, without requiring a separate LLM for memory maintenance.
 
